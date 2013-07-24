@@ -1,7 +1,5 @@
 include_recipe 'apt'
 
-package 'curl'
-
 directory node[:golang][:gopath] do
   recursive true
   mode 0755
