@@ -14,6 +14,7 @@ remote_file "/usr/local/src/#{godeb_tarball}" do
   source "https://godeb.s3.amazonaws.com/#{godeb_tarball}"
   checksum '2ad1e8dc952bfee9625799304097e597'
   not_if "test -f /usr/local/src/#{godeb_tarball}"
+  retries 3
 end
 
 bash 'unpack godeb and install' do
